@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navieras",
+  "info": {
+    "singularName": "naviera",
+    "pluralName": "navieras",
+    "displayName": "Navieras",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

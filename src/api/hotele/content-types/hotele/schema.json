@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hoteles",
+  "info": {
+    "singularName": "hotele",
+    "pluralName": "hoteles",
+    "displayName": "Hoteles"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "fotos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aereos",
+  "info": {
+    "singularName": "aereo",
+    "pluralName": "aereos",
+    "displayName": "Aereos"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
