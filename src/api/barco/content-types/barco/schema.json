@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "barcos",
+  "info": {
+    "singularName": "barco",
+    "pluralName": "barcos",
+    "displayName": "Barco",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "Expedicion",
+        "Fluviales",
+        "Economicos",
+        "Estandard",
+        "Premium",
+        "Upper Premium",
+        "Lujo",
+        "Gran Lujo"
+      ],
+      "default": "Estandard",
+      "required": true
+    },
+    "imagenes": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "wiffi": {
+      "type": "richtext",
+      "required": true
+    },
+    "propinas": {
+      "type": "richtext",
+      "required": true
+    },
+    "politicas_cancelacion": {
+      "type": "richtext",
+      "required": true
+    },
+    "video": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

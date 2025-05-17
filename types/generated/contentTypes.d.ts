@@ -369,6 +369,54 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBarcoBarco extends Struct.CollectionTypeSchema {
+  collectionName: 'barcos';
+  info: {
+    description: '';
+    displayName: 'Barco';
+    pluralName: 'barcos';
+    singularName: 'barco';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    categoria: Schema.Attribute.Enumeration<
+      [
+        'Expedicion',
+        'Fluviales',
+        'Economicos',
+        'Estandard',
+        'Premium',
+        'Upper Premium',
+        'Lujo',
+        'Gran Lujo',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Estandard'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descripcion: Schema.Attribute.RichText & Schema.Attribute.Required;
+    imagenes: Schema.Attribute.Media<'images', true> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::barco.barco'> &
+      Schema.Attribute.Private;
+    nombre: Schema.Attribute.String & Schema.Attribute.Required;
+    politicas_cancelacion: Schema.Attribute.RichText &
+      Schema.Attribute.Required;
+    propinas: Schema.Attribute.RichText & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    video: Schema.Attribute.String & Schema.Attribute.Required;
+    wiffi: Schema.Attribute.RichText & Schema.Attribute.Required;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -878,6 +926,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::barco.barco': ApiBarcoBarco;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
