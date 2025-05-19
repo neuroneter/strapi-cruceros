@@ -4,7 +4,8 @@
   "info": {
     "singularName": "traslado",
     "pluralName": "traslados",
-    "displayName": "traslado"
+    "displayName": "Traslado",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -14,15 +15,15 @@
       "type": "string"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
     },
     "descripcion": {
       "type": "richtext",

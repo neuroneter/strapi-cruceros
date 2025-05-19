@@ -510,7 +510,8 @@ export interface ApiNavieraNaviera extends Struct.CollectionTypeSchema {
 export interface ApiTrasladoTraslado extends Struct.CollectionTypeSchema {
   collectionName: 'traslados';
   info: {
-    displayName: 'traslado';
+    description: '';
+    displayName: 'Traslado';
     pluralName: 'traslados';
     singularName: 'traslado';
   };

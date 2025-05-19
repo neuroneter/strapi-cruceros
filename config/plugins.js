@@ -8,4 +8,4 @@ module.exports = {
             download: true,  // Si deseas que Strapi descargue las traducciones de Localazy
         },
      },
-  };
+  }; 
